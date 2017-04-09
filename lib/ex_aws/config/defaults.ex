@@ -138,4 +138,6 @@ defmodule ExAws.Config.Defaults do
     config = Map.merge(config, @common)
     def get(unquote(service)), do: unquote(Macro.escape(config))
   end
+
+  def auth_cache_expiration_window, do: 60 * 2
 end
